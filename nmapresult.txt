@@ -1,0 +1,26 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-30 21:53 MST
+Nmap scan report for www.cheese.com (195.149.84.153)
+Host is up (0.13s latency).
+Other addresses for www.cheese.com (not scanned): 2001:67c:38c::99
+rDNS record for 195.149.84.153: cheese.wn.com
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE  VERSION
+21/tcp  closed ftp
+80/tcp  open   http     nginx 1.10.3
+|_http-server-header: nginx/1.10.3
+|_http-title: Did not follow redirect to https://cheese.com/
+443/tcp open   ssl/http nginx 1.10.3
+|_http-server-header: nginx/1.10.3
+|_http-title: Cheese.com - World's Greatest Cheese Resource
+| ssl-cert: Subject: commonName=cheese.com
+| Subject Alternative Name: DNS:cheese.com, DNS:cheese.wn.com, DNS:www.cheese.com
+| Not valid before: 2020-09-21T19:51:51
+|_Not valid after:  2020-12-20T19:51:51
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| tls-nextprotoneg: 
+|_  http/1.1
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 31.89 seconds

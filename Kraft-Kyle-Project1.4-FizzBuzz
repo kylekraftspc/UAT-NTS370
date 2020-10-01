@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Kyle Kraft - Project 1.4: FizzBuzz Problem
+
+#This will be a simple program that outputs the numbers 1 - 100 while replacing all numbers divisable by 3 with Fizz, those divisable by 5 with Buzz, and
+# those that are divisable by both with FizzBuzz!
+
+
+#This FOR statement tells the script to perform the the segment for each number within a range.  In this case, 1 to 100.
+for number in {1..100}
+do
+
+#This IF statement will look at the number that is produced and see if it will divide into the numbers 3 & 5 without a remainder.
+# The && is what tells the script to check for both condisions.  If they were ||, the script would only look for one or the other.
+if [ $((number % 5)) == 0 ] && [ $((number % 3)) == 0 ]; then 
+	echo "FizzBuzz"
+	sleep .2  #A sleep statement is added in so that the script doesn't spit out all 100 numbers at once. 
+#ELIF means ELSE IF or, if the above statement is false, check this statement.  Here we check to see if NUMBER can divide into
+# 5 without a remainder. 
+elif [ $((number % 5)) == 0 ]; then
+	echo "Buzz"
+	sleep .2
+#This checks to see if the number is divisable by 3. 
+elif [ $((number % 3)) == 0 ]; then
+	echo "Fizz"
+	sleep .2
+else
+#Finally, if the number is not divisable by either 3 or 5, the number will be returned without any modification. 
+	echo "$number"
+	sleep .2
+	fi
+done

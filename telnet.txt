@@ -1,0 +1,17 @@
+Trying 195.149.84.153...
+Connected to www.cheese.com.
+Escape character is '^]'.
+HTTP/1.1 400 Bad Request
+Server: nginx/1.10.3
+Date: Thu, 01 Oct 2020 04:56:06 GMT
+Content-Type: text/html
+Content-Length: 173
+Connection: close
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body bgcolor="white">
+<center><h1>400 Bad Request</h1></center>
+<hr><center>nginx/1.10.3</center>
+</body>
+</html>
